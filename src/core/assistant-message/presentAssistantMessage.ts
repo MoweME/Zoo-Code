@@ -59,6 +59,8 @@ import { sanitizeToolUseId } from "../../utils/tool-id"
  */
 
 export async function presentAssistantMessage(cline: Task) {
+	// Silent return is safe here: the lock is not yet held, and the streaming
+	// loop's own abort check fires before pWaitFor(userMessageContentReady).
 	if (cline.abort) {
 		return
 	}
