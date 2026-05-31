@@ -414,6 +414,12 @@
 					"default": false,
 					"description": "%settings.debugProxy.tlsInsecure.description%",
 					"markdownDescription": "%settings.debugProxy.tlsInsecure.description%"
+				},
+				"zoo-code.customUserAgent": {
+					"type": "string",
+					"default": "",
+					"description": "Override the default user agent string. Leave empty to use default (ZooCode/version). Example: RooCode/1.0.0",
+					"scope": "window"
 				}
 			}
 		}
